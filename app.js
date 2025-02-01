@@ -55,6 +55,11 @@ function sortearAmigo() {
         return;
     }
 
+    if (amigos.length === 1) {
+        alert("⚠️ Debe haber al menos dos nombres en la lista para realizar el sorteo.");
+        return;
+    }
+
     // Generar un índice aleatorio
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSecreto = amigos[indiceAleatorio];
