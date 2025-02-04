@@ -38,19 +38,41 @@ function agregarAmigo() {
 }
 
 // Función para actualizar la lista de amigos en la interfaz
-function actualizarListaAmigos() {
+/*function actualizarListaAmigos() {
     let lista = document.getElementById("listaAmigos");
 
-  //  if (!lista) {
-  //      console.error("❌ Error: No se encontró el elemento con ID 'listaAmigos'");
-  //      return;
-  //  }
+    if (!lista) {//Control de errores
+       console.error("❌ Error: No se encontró el elemento con ID 'listaAmigos'");
+        return;
+    }
 
     lista.innerHTML = "";
     
     amigos.forEach((amigo) => {
         let li = document.createElement("li");
         li.textContent = amigo;
+        lista.appendChild(li);
+    });
+}*/
+
+// Función para actualizar la lista de amigos en la interfaz con botones de eliminar
+function actualizarListaAmigos() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; // Borra el contenido previo
+
+    amigos.forEach((amigo) => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+
+        // Botón de eliminar
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "❌";
+        botonEliminar.classList.add("boton-eliminar");
+        botonEliminar.onclick = function () {
+            eliminarAmigo(amigo);
+        };
+
+        li.appendChild(botonEliminar);
         lista.appendChild(li);
     });
 }
@@ -86,4 +108,13 @@ function formatearTexto(input) {
         .split(" ") // Dividir por espacios
         .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // Capitalizar cada palabra
         .join(" "); // Volver a unir
+}
+
+// Función para eliminar un amigo de la lista
+function eliminarAmigo(nombre) {
+    // Filtra la lista de amigos, eliminando el que coincida con el nombre dado
+    amigos = amigos.filter(amigo => amigo !== nombre);
+    
+    // Actualiza la lista en la interfaz
+    actualizarListaAmigos();
 }

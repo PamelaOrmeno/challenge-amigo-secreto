@@ -160,3 +160,34 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+/* Ajustamos el contenedor de cada nombre con botón */
+.name-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px; /* Espacio entre el nombre y el botón */
+    padding: 5px;
+}
+
+/* Estilos del botón de eliminar */
+.boton-eliminar {
+    background-color: transparent; /* Sin color de fondo */
+    color: #cc0000; /* Rojo suave */
+    border: 1px solid #cc0000; /* Borde del mismo color del icono */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 12px; /* Tamaño más discreto */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.boton-eliminar:hover {
+    background-color: #cc0000;
+    color: white;
+}
