@@ -12,7 +12,7 @@ function agregarAmigo() {
         return;
     }
 
-    // Validar que el nombre no sea demasiado largo (máximo 20 caracteres)
+    // Validar que el nombre no sea demasiado largo (máximo 100 caracteres)
     const MAX_LONGITUD = 100;
     if (nombre.length > MAX_LONGITUD) {
         alert(`⚠️ El nombre no debe exceder los ${MAX_LONGITUD} caracteres.`);
