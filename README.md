@@ -1,57 +1,61 @@
-# Amigo Secreto
+# 🎁 Amigo Secreto
 
-Este es un proyecto desarrollado como parte del desafío **Amigo Secreto**. La aplicación permite a los usuarios ingresar nombres en una lista y realizar un sorteo aleatorio para determinar quién es el "amigo secreto".
+Este proyecto es una aplicación web interactiva que permite realizar sorteos de "Amigo Secreto" de manera sencilla y rápida. Los usuarios pueden ingresar los nombres de los participantes y generar automáticamente las parejas de intercambio de regalos.
 
-## 📌 Funcionalidades
+🔗 **Prueba la aplicación aquí**: [Amigo Secreto](https://pamelaormeno.github.io/challenge-amigo-secreto/)
 
-- **Agregar nombres**: Los usuarios pueden escribir un nombre en un campo de texto y agregarlo a una lista.
-- **Validar entrada**: Se verifica que el campo no esté vacío, que no se repitan nombres y que no contengan números.
-- **Visualizar lista**: Los nombres ingresados aparecen en una lista visible.
-- **Formato automático**: Cada palabra ingresada se ajusta a "Nombre Apellido" con mayúscula inicial.
-- **Sorteo aleatorio**: Un botón seleccionará aleatoriamente un nombre de la lista y lo mostrará en pantalla.
+## 📌 Características
 
-## 🚀 Tecnologías utilizadas
+- ✅ **Interfaz amigable y atractiva**: Diseño limpio y moderno, con colores vibrantes y fuentes estilizadas.
+- ✅ **Fácil de usar**: Solo es necesario ingresar los nombres de los participantes y presionar el botón de sorteo.
+- ✅ **Resultados instantáneos**: Se muestra el resultado en pantalla de manera automática.
 
-- **HTML**: Estructura del proyecto.
-- **CSS**: Estilos y apariencia.
-- **JavaScript**: Lógica de la aplicación y validaciones.
+## 👋 Tecnologías Utilizadas
 
-## 📂 Estructura del proyecto
+- 🖥 **HTML**: Estructura de la página web.
+- 🎨 **CSS**: Estilos y diseño de la interfaz.
+- 🚀 **JavaScript**: Lógica del sorteo y manipulación del DOM.
 
-```bash
-challenge-amigo-secreto/
-│── index.html      # Estructura principal de la aplicación
-│── styles.css      # Estilos de la aplicación
-│── app.js          # Lógica de la aplicación
-│── README.md       # Documentación del proyecto
-```
+## 🚀 Instalación y Uso
 
-## 📖 Instalación y ejecución
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/PamelaOrmeno/challenge-amigo-secreto.git
-   ```
-2. **Accede al directorio del proyecto:**
-   ```bash
+1. **Clonar el repositorio**  
+   ```sh
+   git clone https://github.com/pamelaormeno/challenge-amigo-secreto.git
    cd challenge-amigo-secreto
    ```
-3. **Abre el archivo `index.html` en tu navegador.**
+2. **Abrir el archivo `index.html` en un navegador**  
+   No se requieren instalaciones adicionales.
 
-## 📌 Mejoras futuras
+## 🎯 Uso de la Aplicación
 
-- Implementación de estilos personalizados para mejorar la interfaz.
-- Funcionalidad para eliminar nombres agregados a la lista.
+1. Ingresa los nombres de los participantes en el campo de texto.
+2. Haz clic en el botón **"Añadir"** para agregarlos a la lista.
+3. Una vez añadidos todos los participantes, presiona el botón **"Sortear amigo secreto"**.
+4. El sistema generará las parejas de forma aleatoria y mostrará los resultados en pantalla.
 
-## 📖 Recursos adicionales
+## 💽 Estructura del Proyecto
 
-Para más información sobre cómo escribir un buen `README.md`, puedes revisar este artículo:
+```
+📺 challenge-amigo-secreto
+│── 📄 index.html       # Estructura principal de la aplicación
+│── 🎨 style.css        # Estilos y diseño visual
+│── 🚀 app.js           # Lógica del sorteo y manejo del DOM
+│── 📄 README.md        # Documentación del proyecto
+│── 📺 assets/          # Imágenes y recursos utilizados
+```
 
-[📘 Cómo escribir un README increíble en tu GitHub](https://www.aluracursos.com/blog/como-escribir-un-readme-increible-en-tu-github)
+## 📌 Mejoras Futuras
 
-## ✨ Autor
+- Agregar la opción de enviar los resultados por correo electrónico.
+- Implementar un sistema para excluir emparejamientos repetidos.
+- Permitir la carga y exportación de participantes desde un archivo.
+- Implementar sitio responsivo para que este sea compatible con dispositivos móviles y de escritorio.
 
-**Pamela Ormeño** - Proyecto desarrollado para el desafío "Amigo Secreto".
+## 🌟 Licencia
+
+Este proyecto está bajo la licencia MIT. ¡Siéntete libre de modificarlo y mejorarlo! 🎉
 
 ---
-📌 _Este archivo README es un borrador y será mejorado en futuras iteraciones._
+
+🔗 **Autor:** [Pamela Ormeño](https://github.com/pamelaormeno)  
+🔗 **Repositorio:** [GitHub](https://github.com/pamelaormeno/challenge-amigo-secreto)
