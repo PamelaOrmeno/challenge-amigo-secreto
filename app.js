@@ -78,29 +78,35 @@ function actualizarListaAmigos() {
 }
 
 // Función para sortear un amigo secreto
+// Función para sortear un amigo secreto y activar el botón de reinicio
 function sortearAmigo() {
-    if (amigos.length === 0) {
-        alert("⚠️ No hay nombres en la lista para sortear.");
-        return;
-    }
-
-    if (amigos.length === 1) {
+    if (amigos.length < 2) {
         alert("⚠️ Debe haber al menos dos nombres en la lista para realizar el sorteo.");
         return;
     }
 
-    // Generar un índice aleatorio
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSecreto = amigos[indiceAleatorio];
-    
-    // Mostrar el resultado en la interfaz
+
     let resultadoLista = document.getElementById("resultado");
     resultadoLista.innerHTML = "";
     
     let li = document.createElement("li");
     li.textContent = `🎉 El amigo secreto es: ${amigoSecreto}`;
     resultadoLista.appendChild(li);
+
+    // Habilitar el botón de reinicio
+    document.getElementById("btnReiniciar").disabled = false;
 }
+
+// Función para reiniciar la lista de amigos y desactivar el botón de reinicio
+function reiniciarLista() {
+    amigos = []; // Vaciar la lista de amigos
+    document.getElementById("listaAmigos").innerHTML = ""; // Limpiar la interfaz
+    document.getElementById("resultado").innerHTML = ""; // Limpiar resultado
+    document.getElementById("btnReiniciar").disabled = true; // Desactivar botón
+}
+
 // Función para capitalizar cada palabra correctamente
 function formatearTexto(input) {
     input.value = input.value

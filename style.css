@@ -87,9 +87,15 @@ body {
     font-size: 16px;
 }
 
-.button-container {
+/*.button-container {
     width: 300px;
     justify-content: center;
+}*/
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Espaciado uniforme entre botones */
 }
 
 /* Estilos de entrada de texto */
@@ -190,4 +196,35 @@ ul {
 .boton-eliminar:hover {
     background-color: #cc0000;
     color: white;
+}
+
+/* Ajuste del botón "Reiniciar lista" */
+.button-reset {
+    background-color: #f5a623; /* Color más cálido, menos agresivo */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo cuando el botón está deshabilitado */
+.button-reset:disabled {
+    background-color: #d9d9d9;
+    color: #8c8c8c;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Hover cuando está habilitado */
+.button-reset:hover:not(:disabled) {
+    background-color: #e5941a;
 }
