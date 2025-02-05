@@ -177,26 +177,21 @@ ul {
 
 /* Estilos del botón de eliminar */
 .boton-eliminar {
-    background-color: transparent; /* Sin color de fondo */
-    color: #cc0000; /* Rojo suave */
-    border: 1px solid #cc0000; /* Borde del mismo color del icono */
-    border-radius: 50%; /* Forma circular */
+    background-color: transparent; /* Sin fondo */
+    color: #888; /* Gris sutil */
+    border: none; /* Sin bordes */
+    font-size: 20px; /* Tamaño adecuado */
     cursor: pointer;
-    padding: 2px 5px;
-    font-size: 12px; /* Tamaño más discreto */
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
+    padding: 0 5px; /* Espaciado mínimo */
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Efecto al pasar el mouse */
+/* Efecto hover */
 .boton-eliminar:hover {
-    background-color: #cc0000;
-    color: white;
+    color: #444; /* Un gris más oscuro al pasar el mouse */
 }
+
 
 /* Ajuste del botón "Reiniciar lista" */
 .button-reset {
@@ -228,3 +223,4 @@ ul {
 .button-reset:hover:not(:disabled) {
     background-color: #e5941a;
 }
+

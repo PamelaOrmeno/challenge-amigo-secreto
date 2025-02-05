@@ -66,7 +66,7 @@ function actualizarListaAmigos() {
 
         // Botón de eliminar
         let botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "❌";
+        botonEliminar.innerHTML = "&times;"; // Usar el símbolo × en lugar de ❌
         botonEliminar.classList.add("boton-eliminar");
         botonEliminar.onclick = function () {
             eliminarAmigo(amigo);
@@ -77,7 +77,7 @@ function actualizarListaAmigos() {
     });
 }
 
-// Función para sortear un amigo secreto
+
 // Función para sortear un amigo secreto y activar el botón de reinicio
 function sortearAmigo() {
     if (amigos.length < 2) {
