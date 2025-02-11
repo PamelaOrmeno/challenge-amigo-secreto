@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px; /* Añadido para móviles */
 }
 
 .main-content {
@@ -28,6 +29,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    padding: 20px; /* Añadido para móviles */
 }
 
 /* Banner */
@@ -37,6 +39,15 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
+    flex-direction: column; /* Añadido para móviles */
+    text-align: center; /* Añadido para móviles */
+}
+
+.header-banner img {
+    width: 100%; /* Añadido para móviles */
+    max-width: 500px; /* Añadido para móviles */
+    height: auto; /* Añadido para móviles */
+    margin-top: 20px; /* Añadido para móviles */
 }
 
 /* Sección de entrada */
@@ -86,11 +97,6 @@ body {
     border-radius: 25px 0 0 25px;
     font-size: 16px;
 }
-
-/*.button-container {
-    width: 300px;
-    justify-content: center;
-}*/
 
 .button-container {
     display: flex;
@@ -166,6 +172,7 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
 /* Ajustamos el contenedor de cada nombre con botón */
 .name-list li {
     display: flex;
@@ -191,7 +198,6 @@ ul {
 .boton-eliminar:hover {
     color: #444; /* Un gris más oscuro al pasar el mouse */
 }
-
 
 /* Ajuste del botón "Reiniciar lista" */
 .button-reset {
@@ -224,3 +230,125 @@ ul {
     background-color: #e5941a;
 }
 
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .header-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .header-banner img {
+        width: 80%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .input-section {
+        border-radius: 32px 32px 0 0;
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-name {
+        width: 90%;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    .button-add {
+        width: 90%;
+        border-radius: 25px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-draw, .button-reset {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .result-list {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        padding: 30px;
+    }
+
+    .header-banner img {
+        width: 60%;
+        max-width: 400px;
+    }
+
+    .input-section {
+        border-radius: 48px 48px 0 0;
+        padding: 20px;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .input-name {
+        width: 80%;
+    }
+
+    .button-add {
+        width: 80%;
+    }
+
+    .button-draw, .button-reset {
+        width: 80%;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .input-name, .button-add, .button-draw, .button-reset {
+        width: 100%;
+    }
+}
