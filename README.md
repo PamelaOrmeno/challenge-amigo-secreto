@@ -47,9 +47,8 @@ Este proyecto es una aplicación web interactiva que permite realizar sorteos de
 ## 📌 Mejoras Futuras
 
 - Agregar la opción de enviar los resultados por correo electrónico.
-- Implementar un sistema para excluir emparejamientos repetidos.
 - Permitir la carga y exportación de participantes desde un archivo.
-- Implementar sitio responsivo para que este sea compatible con dispositivos móviles y de escritorio.
+
 
 ## 🌟 Licencia
 
