@@ -8,27 +8,29 @@ function agregarAmigo() {
 
     // Validar que el nombre no esté vacío
     if (nombre === "") {
-        alert("⚠️ Ingrese el nombre del amigo secreto.");
+        mostrarAlerta("Error", "⚠️ Ingrese el nombre del amigo secreto.");
         return;
     }
+
+    
 
     // Validar que el nombre no sea demasiado largo (máximo 100 caracteres)
     const MAX_LONGITUD = 100;
     if (nombre.length > MAX_LONGITUD) {
-        alert(`⚠️ El nombre no debe exceder los ${MAX_LONGITUD} caracteres.`);
+        mostrarAlerta("Error", `⚠️ El nombre no debe exceder los ${MAX_LONGITUD} caracteres.`);
         return;
     }
 
     // Expresión regular: Permite solo letras, espacios, tildes y guiones, sin números
     const regexNombre = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ\s'-]+$/;
     if (!regexNombre.test(nombre)) {
-        alert("⚠️ El nombre no debe contener números ni caracteres inválidos.");
+        mostrarAlerta("Error", "⚠️ El nombre no debe contener números ni caracteres inválidos.");
         return;
     }
 
     // Validar que el nombre no esté repetido (sin importar mayúsculas/minúsculas)
     if (amigos.some(amigo => amigo.toLowerCase() === nombre.toLowerCase())) {
-        alert("⚠️ Este nombre ya ha sido ingresado.");
+        mostrarAlerta("Error", "⚠️ Este nombre ya ha sido ingresado.");
         return;
     }
 
@@ -110,3 +112,26 @@ function eliminarAmigo(nombre) {
 window.onload = function () {
     document.getElementById("btnReiniciar").disabled = true;
 };
+
+// Función para mostrar la alerta personalizada
+function mostrarAlerta(titulo, mensaje) {
+    const customAlert = document.getElementById("customAlert");
+    const customAlertTitle = document.getElementById("customAlertTitle");
+    const customAlertMessage = document.getElementById("customAlertMessage");
+
+    // Asignar el título y el mensaje
+    customAlertTitle.textContent = titulo;
+    customAlertMessage.textContent = mensaje;
+
+    // Mostrar la alerta
+    customAlert.style.display = "flex";
+}
+
+// Función para cerrar la alerta personalizada
+function cerrarAlerta() {
+    const customAlert = document.getElementById("customAlert");
+    customAlert.style.display = "none";
+}
+
+// Asignar el evento de clic al botón de cerrar
+document.getElementById("customAlertClose").addEventListener("click", cerrarAlerta);
