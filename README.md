@@ -7,6 +7,7 @@ Este proyecto es una aplicación web interactiva que permite realizar sorteos de
 ## 📌 Características
 
 - ✅ **Interfaz amigable y atractiva**: Diseño limpio y moderno, con colores vibrantes y fuentes estilizadas.
+- ✅ **Sitio responsive**: Diseño que se adapta a cualquier dispositivo.
 - ✅ **Fácil de usar**: Solo es necesario ingresar los nombres de los participantes y presionar el botón de sorteo.
 - ✅ **Resultados instantáneos**: Se muestra el resultado en pantalla de manera automática.
 

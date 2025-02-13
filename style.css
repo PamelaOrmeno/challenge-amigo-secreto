@@ -102,6 +102,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 12px; /* Espaciado uniforme entre botones */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en móviles */
 }
 
 /* Estilos de entrada de texto */
@@ -154,83 +155,71 @@ ul {
     text-align: center;
 }
 
-/* Botón de sortear título */
-.button-draw {
+/* Estilos para los botones "Sortear" y "Reiniciar" */
+.button-draw, .button-reset {
+    width: 200px; /* Mismo ancho para ambos botones */
+    padding: 15px 20px; /* Mismo padding para ambos botones */
+    font-size: 16px; /* Mismo tamaño de fuente */
+    font-family: "Inter", sans-serif;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.3s ease-in-out;
 }
 
-.button-draw img {
-    margin-right: 40px;
+/* Estilo específico para el botón "Sortear" */
+.button-draw {
+    background-color: var(--color-button); /* Color naranja */
+    color: var(--color-white); /* Texto blanco */
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover);
+    background-color: var(--color-button-hover); /* Color naranja más oscuro al pasar el mouse */
 }
 
-/* Ajustamos el contenedor de cada nombre con botón */
-.name-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px; /* Espacio entre el nombre y el botón */
-    padding: 5px;
+/* Estilo específico para el botón "Reiniciar" */
+.button-reset {
+    background-color: #f5a623; /* Color naranja cuando está habilitado */
+    color: white;
 }
 
-/* Estilos del botón de eliminar */
+/* Estilo cuando el botón "Reiniciar" está deshabilitado */
+.button-reset:disabled {
+    background-color: #d9d9d9; /* Color gris cuando está deshabilitado */
+    color: #8c8c8c; /* Texto más tenue */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+    box-shadow: none; /* Sin sombra cuando está deshabilitado */
+}
+
+/* Hover cuando el botón "Reiniciar" está habilitado */
+.button-reset:hover:not(:disabled) {
+    background-color: #e5941a; /* Color naranja más oscuro al pasar el mouse */
+}
+
+/* Estilos del botón de eliminar (X) */
 .boton-eliminar {
     background-color: transparent; /* Sin fondo */
     color: #888; /* Gris sutil */
     border: none; /* Sin bordes */
-    font-size: 20px; /* Tamaño adecuado */
+    font-size: 15px; /* Tamaño adecuado */
     cursor: pointer;
-    padding: 0 5px; /* Espaciado mínimo */
+    padding: 0 10px; /* Aumentamos el padding horizontal para más espacio */
     display: inline-block;
     transition: color 0.3s ease-in-out;
+    margin-left: 10px; /* Añadimos margen a la izquierda para separar del nombre */
 }
 
-/* Efecto hover */
+/* Efecto hover para el botón de eliminar */
 .boton-eliminar:hover {
     color: #444; /* Un gris más oscuro al pasar el mouse */
 }
 
-/* Ajuste del botón "Reiniciar lista" */
-.button-reset {
-    background-color: #f5a623; /* Color más cálido, menos agresivo */
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo cuando el botón está deshabilitado */
-.button-reset:disabled {
-    background-color: #d9d9d9;
-    color: #8c8c8c;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-/* Hover cuando está habilitado */
-.button-reset:hover:not(:disabled) {
-    background-color: #e5941a;
-}
-
-/* Estilos para móviles */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -288,8 +277,8 @@ ul {
     }
 
     .button-draw, .button-reset {
-        width: 90%;
-        margin-bottom: 10px;
+        width: 100%; /* Ocupar todo el ancho en móviles */
+        margin-bottom: 10px; /* Espacio entre botones en móviles */
     }
 
     ul {

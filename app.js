@@ -37,24 +37,6 @@ function agregarAmigo() {
     inputNombre.value = "";
 }
 
-// Función para actualizar la lista de amigos en la interfaz
-/*function actualizarListaAmigos() {
-    let lista = document.getElementById("listaAmigos");
-
-    if (!lista) {//Control de errores
-       console.error("❌ Error: No se encontró el elemento con ID 'listaAmigos'");
-        return;
-    }
-
-    lista.innerHTML = "";
-    
-    amigos.forEach((amigo) => {
-        let li = document.createElement("li");
-        li.textContent = amigo;
-        lista.appendChild(li);
-    });
-}*/
-
 // Función para actualizar la lista de amigos en la interfaz con botones de eliminar
 function actualizarListaAmigos() {
     let lista = document.getElementById("listaAmigos");
@@ -77,7 +59,6 @@ function actualizarListaAmigos() {
     });
 }
 
-
 // Función para sortear un amigo secreto y activar el botón de reinicio
 function sortearAmigo() {
     if (amigos.length < 2) {
@@ -95,7 +76,7 @@ function sortearAmigo() {
     li.textContent = `🎉 El amigo secreto es: ${amigoSecreto}`;
     resultadoLista.appendChild(li);
 
-    // Habilitar el botón de reinicio
+    // Habilitar el botón de reinicio solo después de realizar el sorteo
     document.getElementById("btnReiniciar").disabled = false;
 }
 
@@ -124,3 +105,8 @@ function eliminarAmigo(nombre) {
     // Actualiza la lista en la interfaz
     actualizarListaAmigos();
 }
+
+// Asegurarse de que el botón "Reiniciar" esté deshabilitado al cargar la página
+window.onload = function () {
+    document.getElementById("btnReiniciar").disabled = true;
+};
