@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web interactiva que permite realizar sorteos de "Amigo Secreto" de manera sencilla y rápida. Los usuarios pueden ingresar los nombres de los participantes y generar automáticamente las parejas de intercambio de regalos.
 
-🔗 **Prueba la aplicación aquí**: [Amigo Secreto](https://pamelaormeno.github.io/challenge-amigo-secreto/)
+🔗 **Prueba la aplicación aquí**: [Amigo Secreto](https://challenge-amigo-secreto-red.vercel.app/)
 
 ## 📌 Características
 
