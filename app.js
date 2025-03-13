@@ -63,8 +63,8 @@ function actualizarListaAmigos() {
 
 // Función para sortear un amigo secreto y activar el botón de reinicio
 function sortearAmigo() {
-    if (amigos.length < 2) {
-        alert("⚠️ Debe haber al menos dos nombres en la lista para realizar el sorteo.");
+    if (amigos.length < 3) {
+        alert("⚠️ Debe haber al menos tres participantes en la lista para realizar el sorteo.");
         return;
     }
 
